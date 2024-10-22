@@ -10,26 +10,21 @@ namespace NewC_2_4
 
             int maxNumber = 101;
             int number = random.Next(maxNumber);
-            int multipleThree = 3;
-            int multipleFive = 5;
+            int firstMultiple = 3;
+            int secondMultiple = 5;
             int sumNumbers = 0;
 
-            Console.WriteLine($"Заданное число {number} Последовательность всех чисел кратных {multipleThree} и {multipleFive}, которые меньше заданного числа");
+            Console.WriteLine($"Заданное число {number} Последовательность всех чисел кратных {firstMultiple} и {secondMultiple}, которые меньше заданного числа");
 
             for (int i = 1; i <= number; i++) 
             { 
-                if (i % multipleThree == 0)
-                {
-                    Console.Write($"{i} ");
-                    sumNumbers = sumNumbers + i;
-                }
-                else if (i % multipleFive == 0)
+                if (i % firstMultiple == 0 && i % secondMultiple == 0)
                 {
                     Console.Write($"{i} ");
                     sumNumbers = sumNumbers + i;
                 }
             }
-
+             
             Console.WriteLine($"Их сумма - {sumNumbers}");
             Console.ReadKey();            
         }
